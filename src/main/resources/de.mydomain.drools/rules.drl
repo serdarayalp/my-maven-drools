@@ -1,0 +1,11 @@
+package de.mydomain.drools;
+
+global java.util.Set controlSet;
+
+rule "Rule01"
+no-loop
+when
+	Measurement( id == "color", $colorVal : val )
+then
+	controlSet.add($colorVal);
+end
